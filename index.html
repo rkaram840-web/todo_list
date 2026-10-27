@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DayTask | To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">YOUR DAILY SPACE</p>
+        <h1>DayTask <span>✦</span></h1>
+        <p class="subtitle">Small steps make big progress.</p>
+      </div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section class="summary">
+      <div>
+        <p class="summary-label">Today's progress</p>
+        <h2><span id="completedCount">0</span> <small>of <span id="totalCount">0</span> tasks done</small></h2>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+      <div class="progress-icon">✓</div>
+    </section>
+
+    <form id="taskForm" class="task-form">
+      <input id="taskInput" type="text" placeholder="What do you need to do?" maxlength="120" autocomplete="off" aria-label="New task" />
+      <button type="submit">Add task <span>＋</span></button>
+    </form>
+
+    <div class="toolbar">
+      <h2>Your tasks</h2>
+      <div class="filters" role="group" aria-label="Filter tasks">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="active" type="button">Active</button>
+        <button class="filter" data-filter="completed" type="button">Completed</button>
+      </div>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+    <div id="emptyState" class="empty-state">
+      <div class="empty-icon">✧</div>
+      <h3>No tasks here yet</h3>
+      <p>Add a task above and make today count.</p>
+    </div>
+    <footer>Made for your next small win <span>♥</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
